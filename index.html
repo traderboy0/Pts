@@ -2,148 +2,742 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deepak Wadhwa - Learning Community</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<meta name="description" content="PANKAJ BHARDWAJ - Stock Market Education & Market Insights">
+<title>PANKAJ BHARDWAJ | Stock Market</title>
 
 <style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-  .card {
-    width: 85%;
-    max-width: 340px; 
-    background: #010a0f;
-    border: 1.5px solid #00d2ff;
-    border-radius: 35px;
-    padding: 20px 15px;
-    text-align: center;
-    box-shadow: 0 0 25px rgba(0, 210, 255, 0.15);
-  }
+html,body{
+    width:100%;
+    min-height:100%;
+}
 
-  .profile-img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    border: 3px solid #00d2ff;
-    object-fit: cover;
-    margin-top: -5px;
-    box-shadow: 0 0 15px #00d2ff;
-  }
+body{
+    background:#070b18;
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+    overflow-x:hidden;
+    -webkit-text-size-adjust:100%;
+}
 
-  h1 {
-    color: #fff;
-    font-size: 20px;
-    margin: 15px 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
+.container{
+    width:100%;
+    max-width:900px;
+    margin:auto;
+    padding:0 15px;
+}
 
-  .features {
-    text-align: left;
-    margin: 0 auto;
-    width: 90%;
-  }
+/* BACKGROUND */
+body:before{
+    content:"";
+    position:fixed;
+    width:280px;
+    height:280px;
+    top:-100px;
+    left:-100px;
+    background:#704cff;
+    opacity:.13;
+    filter:blur(80px);
+    border-radius:50%;
+    pointer-events:none;
+}
 
-  .feature-item {
-    color: #ccc;
-    font-size: 13px;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    display: flex;
-    align-items: center;
-  }
+body:after{
+    content:"";
+    position:fixed;
+    width:280px;
+    height:280px;
+    right:-100px;
+    bottom:-80px;
+    background:#00bfff;
+    opacity:.08;
+    filter:blur(80px);
+    border-radius:50%;
+    pointer-events:none;
+}
 
-  .feature-item:last-child { border-bottom: none; }
+/* HEADER */
+header{
+    padding:14px 0;
+}
 
-  .icon { margin-right: 12px; font-size: 16px; }
+.header{
+    width:100%;
+    padding:12px 14px;
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:15px;
+    background:rgba(255,255,255,.045);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
 
-  .join-text {
-    color: #eee;
-    font-size: 12px;
-    margin: 20px 0 12px;
-    font-weight: 300;
-  }
+.name{
+    font-size:13px;
+    font-weight:800;
+}
 
-  .telegram-btn {
-    display: block;
-    background: linear-gradient(90deg, #00d2ff 0%, #9247ff 100%);
-    color: white;
-    text-decoration: none;
-    padding: 14px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 12px rgba(0, 210, 255, 0.3);
-  }
+.status{
+    color:#9da8bd;
+    font-size:9px;
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
 
-  .hindi-quote {
-    color: #bbb;
-    font-size: 13px;
-    margin-bottom: 20px;
-    line-height: 1.4;
-  }
+.status i{
+    width:6px;
+    height:6px;
+    background:#35e6a0;
+    border-radius:50%;
+    box-shadow:0 0 8px #35e6a0;
+}
 
-  .footer-box {
-    border: 1px solid rgba(0, 210, 255, 0.2);
-    border-radius: 12px;
-    padding: 8px;
-    font-size: 11px;
-    color: #888;
-  }
+/* HERO */
+.hero{
+    text-align:center;
+    padding:30px 0 42px;
+}
 
-  /* Link styling for Agency */
-  .footer-box a { 
-    color: #00d2ff; 
-    font-weight: bold; 
-    text-decoration: none;
-  }
+/* LOGO - FIXED */
+.logo-box{
+    width:110px;
+    height:110px;
+    padding:4px;
+    margin:0 auto 20px;
+    border-radius:27px;
+    background:linear-gradient(135deg,#9a68ff,#00c8ff);
+    box-shadow:
+        0 0 0 3px rgba(255,255,255,.04),
+        0 15px 45px rgba(90,70,255,.32);
+    position:relative;
+    z-index:5;
+}
 
-  .disclaimer {
-    font-size: 9px;
-    color: #444;
-    margin-top: 12px;
-  }
+.logo{
+    width:100%;
+    height:100%;
+    display:block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    object-fit:cover;
+    border-radius:23px;
+    background:#151b30;
+}
+
+/* fallback text */
+.logo-box:after{
+    content:"PANKAJ";
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:10px;
+    font-weight:bold;
+    z-index:-1;
+}
+
+.badge{
+    display:inline-block;
+    padding:7px 11px;
+    border-radius:30px;
+    border:1px solid rgba(150,110,255,.25);
+    background:rgba(120,75,255,.09);
+    color:#c5b2ff;
+    font-size:9px;
+    font-weight:bold;
+    margin-bottom:14px;
+}
+
+h1{
+    font-size:clamp(34px,11vw,58px);
+    line-height:1.04;
+    letter-spacing:-1.8px;
+    margin-bottom:15px;
+}
+
+.gradient{
+    background:linear-gradient(90deg,#fff,#b59aff,#64d9ff);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+
+.hero-text{
+    max-width:580px;
+    margin:auto;
+    color:#a4aec1;
+    font-size:13px;
+    line-height:1.65;
+}
+
+/* TELEGRAM BUTTON */
+.button-area{
+    margin-top:23px;
+}
+
+.telegram{
+    width:100%;
+    max-width:310px;
+    min-height:52px;
+    margin:auto;
+    padding:14px 18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    border-radius:14px;
+    text-decoration:none;
+    color:#fff;
+    font-size:14px;
+    font-weight:800;
+    background:linear-gradient(135deg,#8050ff,#286bff);
+    box-shadow:0 12px 28px rgba(62,75,255,.27);
+}
+
+.tg-icon{
+    width:22px;
+    height:22px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#fff;
+    color:#3976e8;
+    border-radius:50%;
+    font-size:12px;
+}
+
+.small-text{
+    margin-top:9px;
+    color:#707b91;
+    font-size:9px;
+}
+
+/* MARKET */
+.section-title{
+    text-align:center;
+    color:#8994aa;
+    font-size:10px;
+    letter-spacing:1.7px;
+    margin-bottom:12px;
+    text-transform:uppercase;
+}
+
+.market-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:9px;
+}
+
+.card{
+    min-width:0;
+    padding:15px 12px;
+    border-radius:16px;
+    border:1px solid rgba(255,255,255,.07);
+    background:rgba(255,255,255,.04);
+}
+
+.card-label{
+    color:#818ca2;
+    font-size:8px;
+}
+
+.card-title{
+    margin-top:7px;
+    font-size:17px;
+    font-weight:800;
+}
+
+.card-text{
+    margin-top:5px;
+    color:#63d3a8;
+    font-size:8px;
+}
+
+/* FEATURES */
+.features{
+    padding:42px 0;
+}
+
+.features h2{
+    text-align:center;
+    font-size:25px;
+    margin-bottom:7px;
+}
+
+.intro{
+    text-align:center;
+    color:#8792a8;
+    font-size:11px;
+    line-height:1.5;
+    margin-bottom:20px;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+
+.feature{
+    padding:18px 14px;
+    border-radius:17px;
+    border:1px solid rgba(255,255,255,.07);
+    background:rgba(255,255,255,.035);
+}
+
+.icon{
+    width:37px;
+    height:37px;
+    border-radius:11px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(124,77,255,.13);
+    font-size:17px;
+    margin-bottom:12px;
+}
+
+.feature h3{
+    font-size:13px;
+    margin-bottom:6px;
+}
+
+.feature p{
+    color:#8792a8;
+    font-size:10px;
+    line-height:1.55;
+}
+
+/* COMMUNITY */
+.community{
+    padding-bottom:38px;
+}
+
+.community-box{
+    text-align:center;
+    padding:27px 16px;
+    border-radius:21px;
+    border:1px solid rgba(135,95,255,.20);
+    background:rgba(255,255,255,.035);
+}
+
+.community-box h2{
+    font-size:23px;
+    margin-bottom:8px;
+}
+
+.community-box p{
+    color:#8d98ad;
+    font-size:11px;
+    line-height:1.55;
+}
+
+/* DISCLAIMER */
+.disclaimer{
+    padding-bottom:28px;
+}
+
+.disclaimer-box{
+    padding:14px;
+    border-radius:13px;
+    background:rgba(255,255,255,.025);
+    border:1px solid rgba(255,255,255,.06);
+}
+
+.disclaimer-title{
+    color:#c2c9d7;
+    font-size:10px;
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+.disclaimer-text{
+    color:#6f7a90;
+    font-size:8.5px;
+    line-height:1.6;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.06);
+    padding:18px 12px 24px;
+    color:#5f6a80;
+    font-size:8.5px;
+    line-height:1.5;
+}
+
+.agency{
+    display:inline-block;
+    margin-top:8px;
+    color:#9d8cff;
+    text-decoration:none;
+    font-size:10px;
+    font-weight:700;
+}
+
+/* FLOATING */
+.floating{
+    position:fixed;
+    right:14px;
+    bottom:14px;
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    color:#fff;
+    background:linear-gradient(135deg,#8050ff,#286bff);
+    box-shadow:0 8px 25px rgba(50,70,255,.4);
+    z-index:999;
+    font-size:20px;
+}
+
+/* DESKTOP */
+@media(min-width:701px){
+
+    .hero{
+        padding-top:45px;
+    }
+
+    .logo-box{
+        width:125px;
+        height:125px;
+    }
+
+    .hero-text{
+        font-size:15px;
+    }
+
+    .floating{
+        display:none;
+    }
+}
+
+/* SMALL MOBILE */
+@media(max-width:360px){
+
+    .container{
+        padding:0 12px;
+    }
+
+    .logo-box{
+        width:100px;
+        height:100px;
+    }
+
+    h1{
+        font-size:34px;
+    }
+
+    .market-grid{
+        gap:7px;
+    }
+
+    .card{
+        padding:13px 9px;
+    }
+
+    .feature{
+        padding:16px 12px;
+    }
+}
 </style>
 </head>
+
 <body>
 
-<div class="card">
-  <img src="https://i.ibb.co/FkV61CBG/711752123-122102238423341553-4586529772719677765-n.jpg" alt="Munaaf" class="profile-img">
+<header>
+    <div class="container">
+        <div class="header">
+            <div class="name">PANKAJ BHARDWAJ</div>
 
-  <h1>Munaaf</h1>
+            <div class="status">
+                <i></i>
+                Market Education
+            </div>
+        </div>
+    </div>
+</header>
 
-  <div class="features">
-    <div class="feature-item"><span class="icon"></span> Learning & Educational Sessions</div>
-    <div class="feature-item"><span class="icon"></span> Market Concepts & Awareness</div>
-    <div class="feature-item"><span class="icon"></span> Chart Reading Concepts</div>
-    <div class="feature-item"><span class="icon"></span> Educational Case Discussions</div>
-  </div>
 
-  <p class="join-text">Join our learning community and grow your knowledge</p>
+<main>
 
-  <a href="https://t.me/+VQKcLntbMYhjOGJl" class="telegram-btn">JOIN TELEGRAM</a>
+<section class="hero">
 
-  <p class="hindi-quote">     ,     </p>
+    <div class="container">
 
-  <div class="footer-box">
-    This Channel Advertise By <a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">AD BUILD AGENCY</a>
-  </div>
+        <!-- LOGO -->
+        <div class="logo-box">
+            <img
+                src="https://i.ibb.co/SDQgx9rX/In-Shot-20260927-004607581.jpg"
+                class="logo"
+                alt="PANKAJ BHARDWAJ Logo"
+                width="110"
+                height="110"
+                loading="eager"
+                decoding="async"
+                onerror="this.style.display='none';"
+            >
+        </div>
 
-  <div class="disclaimer">
-    Terms | Privacy | Disclaimer <br>
-    This site is not part of Facebook� or endorsed by Facebook�.
-  </div>
-</div>
+        <div class="badge">
+            ✦ STOCK MARKET COMMUNITY
+        </div>
+
+        <h1>
+            Learn The Market.<br>
+            <span class="gradient">
+                Build Your Knowledge.
+            </span>
+        </h1>
+
+        <p class="hero-text">
+            Explore stock market concepts, market observations
+            and educational insights through the
+            PANKAJ BHARDWAJ community.
+        </p>
+
+        <div class="button-area">
+
+            <a
+                class="telegram"
+                href="https://t.me/+oj2jSebeenoxNzJl"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <span class="tg-icon">➤</span>
+                Join Free Telegram
+            </a>
+
+            <div class="small-text">
+                Free access • Educational content • Market insights
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section>
+    <div class="container">
+
+        <div class="section-title">
+            Market Focus
+        </div>
+
+        <div class="market-grid">
+
+            <div class="card">
+                <div class="card-label">
+                    MARKET EDUCATION
+                </div>
+                <div class="card-title">
+                    Learn
+                </div>
+                <div class="card-text">
+                    Concept focused
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-label">
+                    MARKET INSIGHTS
+                </div>
+                <div class="card-title">
+                    Observe
+                </div>
+                <div class="card-text">
+                    Market activity
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-label">
+                    TRADING KNOWLEDGE
+                </div>
+                <div class="card-title">
+                    Grow
+                </div>
+                <div class="card-text">
+                    Build knowledge
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="features">
+
+    <div class="container">
+
+        <h2>
+            Inside The Community
+        </h2>
+
+        <p class="intro">
+            Explore market-related educational content.
+        </p>
+
+        <div class="feature-grid">
+
+            <div class="feature">
+                <div class="icon">📊</div>
+
+                <h3>
+                    Market Insights
+                </h3>
+
+                <p>
+                    Educational observations and discussions
+                    around market movements.
+                </p>
+            </div>
+
+
+            <div class="feature">
+                <div class="icon">📚</div>
+
+                <h3>
+                    Learn & Understand
+                </h3>
+
+                <p>
+                    Understand market terminology,
+                    charts and concepts.
+                </p>
+            </div>
+
+
+            <div class="feature">
+                <div class="icon">💡</div>
+
+                <h3>
+                    Knowledge First
+                </h3>
+
+                <p>
+                    Focus on learning and research
+                    instead of unrealistic promises.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="community">
+
+    <div class="container">
+
+        <div class="community-box">
+
+            <h2>
+                Join The Community
+            </h2>
+
+            <p>
+                Get access to stock market educational
+                content and community discussions on Telegram.
+            </p>
+
+            <div class="button-area">
+
+                <a
+                    class="telegram"
+                    href="https://t.me/+oj2jSebeenoxNzJl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <span class="tg-icon">➤</span>
+                    Join Free Telegram
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="disclaimer">
+
+    <div class="container">
+
+        <div class="disclaimer-box">
+
+            <div class="disclaimer-title">
+                Risk Disclosure
+            </div>
+
+            <div class="disclaimer-text">
+                This page is intended for general educational and
+                informational purposes only. Stock market investments
+                are subject to market risks. Past performance does not
+                guarantee future results. Please conduct your own
+                research and consider consulting a qualified financial
+                professional before making investment decisions.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    © 2026 PANKAJ BHARDWAJ • Educational Community
+
+    <br>
+
+    <a
+        class="agency"
+        href="https://t.me/+3XoqJNLxYHswNTc1"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Promoted By AD BUILD AGENCY
+    </a>
+
+</footer>
+
+
+<a
+    class="floating"
+    href="https://t.me/+oj2jSebeenoxNzJl"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Join Free Telegram"
+>
+    ➤
+</a>
 
 </body>
+  
 </html>
